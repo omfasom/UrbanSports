@@ -37,7 +37,7 @@
 2) Create/add configuration
 3) Name the configuration
 4) Click apply and save it
-5) Repeat above steps to create another maven configuration with command line as 'clean install site -DsuiteFile=api_regression.xml'
+5) Repeat above steps to create another maven configuration with command line as 'clean install site -DsuiteFile=FrontEnd_test_suite.xml'
 
 
 **Test Framework Structure:**
