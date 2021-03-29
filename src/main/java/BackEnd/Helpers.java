@@ -16,6 +16,7 @@ public class Helpers {
   }
   /**
    * This method fetch username from response and validate if user name is correct
+   *
    * @param response
    */
   public static void verifyUsername(Response response) {
@@ -29,7 +30,7 @@ public class Helpers {
 
   public static void emailValidation(Response response) {
     List<Integer> commentList = response.jsonPath().getList("id");
-    for (int i = 0; i < commentList.size(); i++){
+    for (int i = 0; i < commentList.size(); i++) {
       int commentId = commentList.get(i);
       response = fetchComments(commentId);
       String emailId = response.jsonPath().getString("email[0]");
@@ -37,12 +38,12 @@ public class Helpers {
       logInfo("EmailId format is correct!");
     }
   }
+
   public static boolean isValidEmailAddress(String email) {
-    String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+    String ePattern =
+        "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
     java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
     java.util.regex.Matcher m = p.matcher(email);
     return m.matches();
   }
-
-
 }

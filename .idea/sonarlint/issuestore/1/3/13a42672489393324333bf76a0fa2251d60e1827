@@ -1,4 +1,4 @@
 
-d
-java:S2094"BRemove this empty class, write its code or make it an "interface".(“ƒΒΖϋÿÿÿÿ8Ό©‹Α‡/
+\
+java:S1118":Add a private constructor to hide the implicit public one.(“ƒΒΖϋÿÿÿÿ8¥ψΏΑ‡/
 n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ηρά

@@ -1,4 +1,8 @@
 
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(ÓÆ¿ƒ8ßúŒÁ‡/
 n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çñÜ
+W
+java:S1118":Add a private constructor to hide the implicit public one.(ÓÆ¿ƒ8Ğ¨ÇÁ‡/
+i
+java:S5998,"LRefactor this repetition that can lead to a stack overflow for large inputs.(ÃôÆ8Í¡Éû‡/
+q
+java:S5843,"TSimplify this regular expression to reduce its complexity from 24 to the 20 allowed.(ÃôÆ8Í¡Éû‡/

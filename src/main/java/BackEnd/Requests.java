@@ -14,36 +14,44 @@ public class Requests {
   public static Response getUserName(String userName) {
     RestAssured.defaultParser = Parser.JSON;
     final String resourcePath = Resources.resource;
-    return
-        given().
-            baseUri(resourcePath).
-            param("username", userName).
-            when().get("/users").
-            then().contentType(ContentType.JSON).extract().response();
+    return given()
+        .baseUri(resourcePath)
+        .param("username", userName)
+        .when()
+        .get("/users")
+        .then()
+        .contentType(ContentType.JSON)
+        .extract()
+        .response();
   }
 
   @Step("Get request in order to fetch posts from the specific user!")
   public static Response getPosts(int userId) {
     RestAssured.defaultParser = Parser.JSON;
     final String resourcePath = Resources.resource;
-    return
-        given().
-            baseUri(resourcePath).
-            param("userId", userId).
-            when().get("/posts").
-            then().contentType(ContentType.JSON).extract().response();
+    return given()
+        .baseUri(resourcePath)
+        .param("userId", userId)
+        .when()
+        .get("/posts")
+        .then()
+        .contentType(ContentType.JSON)
+        .extract()
+        .response();
   }
 
   @Step("Get request in order to fetch comments from the specific post!")
   public static Response fetchComments(int commentId) {
     RestAssured.defaultParser = Parser.JSON;
     final String resourcePath = Resources.resource;
-    return
-        given().
-            baseUri(resourcePath).
-            param("id", commentId).
-            when().get("/comments").
-            then().contentType(ContentType.JSON).extract().response();
+    return given()
+        .baseUri(resourcePath)
+        .param("id", commentId)
+        .when()
+        .get("/comments")
+        .then()
+        .contentType(ContentType.JSON)
+        .extract()
+        .response();
   }
-
 }
